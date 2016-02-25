@@ -21,6 +21,11 @@
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
 
+    <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+        maxActive="100" maxIdle="30" maxWait="10000"
+        username="${jdbc.example.user}" password="${jdbc.example.password}" driverClassName="com.mysql.jdbc.Driver"
+        url="${jdbc.example.url}"/>
+
     <!-- Uncomment this to disable session persistence across Tomcat restarts -->
     <!--
     <Manager pathname="" />
