@@ -4,4 +4,19 @@
 
   <!-- activate next line to be able to deploy applications in apps -->
   <!-- <Deployments dir="apps" /> -->
+
+  <Resource id="jdbc/managed/demo" type="DataSource">
+    JdbcDriver        com.microsoft.sqlserver.jdbc.SQLServerDriver
+    JdbcUrl           ${jdbc.connectionString}
+    JtaManaged        true
+    DefaultAutoCommit false
+  </Resource>
+
+  <Resource id="jdbc/unmanaged/demo" type="DataSource">
+    JdbcDriver        com.microsoft.sqlserver.jdbc.SQLServerDriver
+    JdbcUrl           ${jdbc.connectionString}
+    JtaManaged        false
+    DefaultAutoCommit true
+  </Resource>
+
 </tomee>
