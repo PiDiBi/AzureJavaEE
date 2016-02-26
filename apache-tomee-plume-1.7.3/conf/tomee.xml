@@ -8,6 +8,8 @@
   <Resource id="jdbc/managed/demo" type="DataSource">
     JdbcDriver        com.microsoft.sqlserver.jdbc.SQLServerDriver
     JdbcUrl           ${jdbc.connectionString}
+    UserName          ${jdbc.user}
+    Password          ${jdbc.password}
     JtaManaged        true
     DefaultAutoCommit false
   </Resource>
@@ -15,6 +17,8 @@
   <Resource id="jdbc/unmanaged/demo" type="DataSource">
     JdbcDriver        com.microsoft.sqlserver.jdbc.SQLServerDriver
     JdbcUrl           ${jdbc.connectionString}
+    UserName          ${jdbc.user}
+    Password          ${jdbc.password}
     JtaManaged        false
     DefaultAutoCommit true
   </Resource>
